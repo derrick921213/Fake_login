@@ -6,6 +6,11 @@ services:
       NODE_ENV: production
     ports:
       - 3000:3000
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /usr/src/app
 networks:
   default:
     name: proxy-manage_default
