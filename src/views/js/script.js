@@ -1,9 +1,8 @@
-document.querySelector("form").onsubmit = function (event) {
-  event.preventDefault();
+document.getElementById("login-form").onsubmit = function (event) {
   var emailInput = document.getElementById("email");
   var nextButton = document.getElementById("next-button");
-  if (emailInput.type === "email") {
-    var emailValue = emailInput.value;
+  if (emailInput.style.display !== "none") {
+    event.preventDefault();
     emailInput.style.display = "none";
     var passwordInput = document.getElementById("password");
     if (!passwordInput) {
@@ -16,7 +15,6 @@ document.querySelector("form").onsubmit = function (event) {
       form.insertBefore(passwordInput, nextButton);
       nextButton.value = "登入";
     }
-  } else {
-    document.getElementById("login-form").submit();
+    nextButton.type = "submit";
   }
 };
