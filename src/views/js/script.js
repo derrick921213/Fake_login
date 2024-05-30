@@ -10,7 +10,7 @@ document.getElementById("login-form").onsubmit = function (event) {
       passwordInput.type = "password";
       passwordInput.name = "password";
       passwordInput.id = "password";
-      passwordInput.placeholder = "輸入密码";
+      passwordInput.placeholder = "輸入密碼";
       var form = document.getElementById("login-form");
       form.insertBefore(passwordInput, nextButton);
       nextButton.value = "登入";

